@@ -1,6 +1,35 @@
-# Express Content API
 
-This project sets up an Express application that serves content from various APIs. It includes functionality to fetch and translate content.
+
+## Overview
+This file sets up an Express application that serves content from various APIs. It imports necessary modules, initializes the Express application, and configures middleware.
+
+## Imports
+- `express`: The Express framework for building web applications.
+- `fetchContent`: A helper function to fetch content from a specified API.
+- `fetchContentAndTranslate`: A helper function to fetch content from a specified API and translate it.
+
+## Variables
+- `app`: An instance of the Express application.
+- `port`: The port number on which the server will listen. It defaults to `8000` if the `PORT` environment variable is not set.
+- `contentApis`: An object that will hold the API URLs and their corresponding ISO 639-2 language codes.
+
+## Middleware
+- `app.use(express.json())`: Adds middleware to parse incoming JSON requests.
+
+## Example Usage
+To start the server, you would typically run a command like `node index.js` or use a task runner like `nodemon` for development.
+
+## API 
+
+GET /unified-content
+Fetches unified content from multiple sources defined in the contentApis array.
+
+GET /lang/:lang
+lang (string): The language code ( ISO 639-2 ) to fetch content for.
+
+Endpoint: GET /translate/:lang
+lang (string): The language code ( ISO 639-2 ) to fetch and translate content for.
+
 
 ## Prerequisites
 
