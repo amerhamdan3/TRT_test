@@ -3,7 +3,3 @@ runtime: nodejs20
 env_variables:
   PORT: 8080
   # Add other environment variables here
-
-handlers:
-  - url: /.*
-    script: auto
